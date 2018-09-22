@@ -1,0 +1,407 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background: #FCF2CF;
+	background: url(/lolturm/images/background/project-vayne-full.jpg)
+		no-repeat fixed;
+	background-position: center 0px;
+	background-size: cover;
+	color: #FCF2CF;
+}
+
+nav {
+	text-align: center;
+}
+
+.bar {
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	background: #6B2D44;
+	color: white;
+	z-index: 99;
+}
+
+.bar p {
+	display: inline;
+	font-size: 30pt;
+}
+
+.bar p.guides {
+	margin-left: -22px;
+	margin-top: 10px;
+}
+
+.bar p.login {
+	margin-left: 180px;
+	padding-top: 10px;
+}
+
+nav img {
+	position: relative;
+}
+
+.logo {
+	z-index: 99;
+}
+
+.container-fluid {
+	text-align: center;
+}
+
+.roles {
+	
+}
+
+.roles ul {
+	list-style-type: none;
+	margin: 0 auto;
+	vertical-align: middle;
+	margin-top: 20vh;
+	padding-left: 0px;
+}
+
+.roles ul li {
+	display: inline;
+	vertical-align: middle;
+	margin: 0 30px;
+}
+
+.roles ul li button {
+	width: 19%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.newsguides {
+	background: red;
+	position: absolute;
+	margin-top: 200px;
+}
+
+.champions {
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	border-radius: 100px;
+}
+
+.item {
+	height: 100px;
+	width: 960px;
+	z-index: 1;
+	border: 1px solid #6b2d44;
+	position: relative;
+	margin: 0 auto;
+}
+
+.patch {
+	position: absolute;
+	z-index: 2;
+	width: 100px;
+	height: 20px;
+	transform: rotate(-90deg);
+	background: #6b2d44;
+	color: #fcf2cf;
+	font-size: 12px;
+	left: -41px;
+	top: 39px;
+}
+
+.picture {
+	position: absolute;
+	z-index: 2;
+	top: 12.5px;
+	left: 32.5px;
+}
+
+.picture img {
+	width: 75px;
+	height: 75px;
+	text-align: center;
+	border-radius: 100px;
+}
+
+.position {
+	position: absolute;
+	z-index: 2;
+	top: 12.5px;
+	left: 120px;
+}
+
+.position img {
+	width: 75px;
+	height: 75px;
+	text-align: center;
+}
+
+.keystone {
+	position: absolute;
+	z-index: 2;
+	top: 37.5px;
+	left: 207.5px;
+}
+
+.keystone img {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 100px;
+}
+
+.secondtree {
+	position: absolute;
+	z-index: 2;
+	top: 51.5px;
+	left: 248px;
+}
+
+.secondtree img {
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	border-radius: 100px;
+}
+
+.info {
+	position: absolute;
+	z-index: 2;
+	top: 12.5px;
+	left: 343px;
+}
+
+.info p {
+	text-align: center;
+	color: #6B2D44;
+}
+
+.itemset {
+	position: absolute;
+	z-index: 2;
+	top: 12.5px;
+	left: 450px;
+	width: 160px;
+}
+
+.itemset img {
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	border-radius: 100px;
+}
+
+.bewertung {
+	position: absolute;
+	z-index: 2;
+	top: 35px;
+	left: 662.5px;
+}
+
+.button {
+	position: absolute;
+	z-index: 2;
+	top: 35px;
+	left: 820px;
+}
+
+.button button {
+	text-align: center;
+	border-radius: 100px;
+	background-color: #6B2D44;
+	color: #FCF2CF;
+	border: 1px solid #FCF2CF;
+}
+
+.registerbox {
+	border: 10px solid #6B2D44;
+	border-radius: 20px;
+	width: 500px;
+	margin: 20px auto 0 auto;
+	color: #6B2D44;
+	padding: 20px;
+}
+
+.registerbox table {
+	width: 100%;
+}
+
+.registerbox input {
+	width: 100%;
+	background: #FCF2CF;
+	border: 2px solid #6B2D44;
+	border-radius: 20px;
+	color: #6B2D44;
+	padding: 0 0 0 10px;
+}
+
+.registerbox input[type=button] {
+	padding: 0 0 0 0;
+}
+
+.editnewguide {
+	width: 100%;
+	text-align: left;
+}
+
+.editnewguide td:FIRST-CHILD {
+	width: 10%;
+}
+
+span.fr-emoticon.fr-deletable.fr-emoticon-img {
+	background-size: 1em !important;
+	background-repeat: no-repeat !important;
+	font-size: inherit;
+	height: 1em;
+	width: 1em;
+	min-height: 20px;
+	min-width: 20px;
+	display: inline-block;
+	margin: -.1em .1em .1em;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.guide {
+	width: 900px;
+	position: relative;
+	margin: 0 auto;
+}
+
+input[value=up] {
+	width: 44px;
+	height: 24px;
+	font-size: 0;
+	background: url(/lolturm/images/icons/arrow.png) no-repeat top left;
+	background-size: 44px 24px;
+	border: none;
+	overflow: hidden;
+	text-indent: -99em;
+}
+
+input[value=down] {
+	width: 44px;
+	height: 24px;
+	font-size: 0;
+	background: url(/lolturm/images/icons/arrow.png) no-repeat top left;
+	background-size: 44px 24px;
+	border: none;
+	overflow: hidden;
+	text-indent: -99em;
+	transform: rotate(180deg);
+}
+
+form.guidebewertung {
+	width: 44px;
+	float: left;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	color: #6B2D44;
+	font-weight: bold;
+	font-size: 1.5em;
+	top: 20vh;
+}
+
+.guidebody {
+	position: absolute;
+	z-index: 1;
+	left: 100px;
+	top: 20vh;
+	border: #6B2D44 1px solid;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+}
+
+.guideheader {
+	
+}
+
+img.championicon {
+	width: 120px;
+	height: 120px;
+}
+
+.guideitemset {
+	overflow: auto;
+	margin: 1rem;
+}
+
+.guideitemset p {
+	float: left;
+}
+
+.guideskillorder {
+	overflow: auto;
+	margin: 1rem;
+}
+
+.guiderunes {
+	overflow: -webkit-paged-x;
+	margin: 1rem;
+}
+
+#selectedRunes {
+	width: 100%;
+	float: left;
+}
+
+#PrecisionTree {
+	border: 1px solid yellow;
+	background-image: url(/lolturm/images/runes/Precision-Image.png);
+	background-color: rgba(255, 255, 0, 0.2);
+}
+
+#DominationTree {
+	border: 1px solid red;
+	background-image: url(/lolturm/images/runes/Domination-Image.png);
+	background-color: rgba(255, 0, 0, 0.2);
+}
+
+#SorceryTree {
+	border: 1px solid purple;
+	background-image: url(/lolturm/images/runes/Sorcery-Image.png);
+	background-color: rgba(150, 0, 255, 0.2);
+}
+
+#ResolveTree {
+	border: 1px solid green;
+	background-image: url(/lolturm/images/runes/Resolve-Image.png);
+	background-color: rgba(0, 255, 0, 0.2);
+}
+
+#InspirationTree {
+	border: 1px solid aqua;
+	background-image: url(/lolturm/images/runes/Inspiration-Image.png);
+	background-color: rgba(0, 255, 255, 0.2);
+}
+
+.selectedFirstTree {
+	width: 60%;
+	float: left;
+	padding: 10px;
+	text-align: center;
+	background-size: 520px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.selectedSecondTree {
+	width: 40%;
+	padding: 10px;
+	text-align: center;
+	float: left;
+	background-size: 520px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#runesDesc {
+	
+}
+
+#runeTooltip {
+	width: 500px;
+	background: black;
+	z-index: 99;
+}

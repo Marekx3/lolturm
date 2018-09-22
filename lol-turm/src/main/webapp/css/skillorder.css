@@ -1,0 +1,59 @@
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: -12px;
+    width: 60px;
+    height: 44px;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 52px;
+    height: 37px;
+    background: #6B2D44;
+    position: absolute;
+    top: -8px;
+    left: -12px;
+    border-radius: 20%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+table#skillordertable{
+	background-color: rgba(6,6,6,0);
+	width: 100%;
+}
+#skillordertable tr td{
+	border: 1px solid rgba(6,6,6,1);
+	text-align: center;
+}
+#skillordertable p{
+	padding: 0px;
+}

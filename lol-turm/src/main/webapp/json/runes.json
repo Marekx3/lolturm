@@ -1,0 +1,10 @@
+[
+  {
+    "name": "PRESSTHEATTACK",
+    "desc": "<p>Hitting an enemy champion with 3 consecutive basic attacks will deal 30 - 120 bonus adaptive damage (based on level) and makes them vulnerable, increasing the damage they take by 12% from all sources for 6s.</p>"
+  },
+  {
+    "name": "LETHALTEMPO",
+    "desc": "<p>1.5s after damaging a champion gain 30 - 80% Attack Speed (based on level) for 3s. Attacking a champion extends the effect to 6s.</p>"
+  }
+]
