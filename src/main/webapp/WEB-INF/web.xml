@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+  <servlet>
+    <servlet-name>SelectChampionView</servlet-name>
+    <jsp-file>/jsp/SelectChampion.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectChampionView</servlet-name>
+    <url-pattern>/SelectChampion/*</url-pattern>
+  </servlet-mapping>
 </web-app>

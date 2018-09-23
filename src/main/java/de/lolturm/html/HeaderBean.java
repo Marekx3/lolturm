@@ -1,11 +1,11 @@
 package de.lolturm.html;
 
-public class headerBean {
+public class HeaderBean {
 	
 	private String userid;
 	private String currentSite;
 
-	public headerBean() {
+	public HeaderBean() {
 		this.userid = "Login";
 		this.currentSite = "IndexServlet";
 	}

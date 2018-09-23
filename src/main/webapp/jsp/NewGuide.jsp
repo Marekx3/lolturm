@@ -1,9 +1,9 @@
 <%@page import="de.lolturm.guide.GuideBean"%>
 <%@page import="de.lolturm.html.NewGuideBean"%>
-<%@page import="de.lolturm.html.headBean"%>
+<%@page import="de.lolturm.html.HeadBean"%>
 <%@page import="de.lolturm.userid.UseridBean"%>
 <%@page import="de.lolturm.html.PositionBean"%>
-<%@page import="de.lolturm.html.headerBean"%>
+<%@page import="de.lolturm.html.HeaderBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
-<jsp:useBean id="headBean" class="de.lolturm.html.headBean" scope="session"/>
+<jsp:useBean id="headBean" class="de.lolturm.html.HeadBean" scope="session"/>
 <jsp:getProperty property="headHtml" name="headBean" />
 
 
@@ -55,7 +55,7 @@ section {
 </head>
 <body>
 
-	<jsp:useBean id="headerBean" class="de.lolturm.html.headerBean" scope="session" />
+	<jsp:useBean id="headerBean" class="de.lolturm.html.HeaderBean" scope="session" />
 	<jsp:useBean id="messageBean" class="de.lolturm.message.MessageBean" />
 	<jsp:useBean id="useridBean" class="de.lolturm.userid.UseridBean" scope="session" />
 	<jsp:useBean id="newGuideBean" class="de.lolturm.html.NewGuideBean" scope="session"/>

@@ -1,8 +1,8 @@
 package de.lolturm.html;
 
-public class headBean {
+public class HeadBean {
 
-	public headBean() {
+	public HeadBean() {
 
 	}
 

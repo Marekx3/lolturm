@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<jsp:useBean id="headBean" class="de.lolturm.html.headBean" scope="session"/>
+<jsp:useBean id="headBean" class="de.lolturm.html.HeadBean" scope="session"/>
 <jsp:getProperty property="headHtml" name="headBean" />
 <!-- <script type="text/javascript" src="/lolturm/js/tooltip.js"></script>
  -->

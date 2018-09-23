@@ -21,83 +21,84 @@ import de.lolturm.html.SelectChampionBean;
  */
 @WebServlet("/SelectChampionServlet")
 public class SelectChampionServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public SelectChampionServlet() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public SelectChampionServlet() {
+        super();
+    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// --------------------------BEANS----------------
-		PositionBean positionBean = (PositionBean) request.getSession().getAttribute("positionBean");
-		if (positionBean == null) {
-			positionBean = new PositionBean();
-			request.getSession().setAttribute("positionBean", positionBean);
-		}
-		SelectChampionBean selectChampionBean = (SelectChampionBean) request.getSession().getAttribute("selectChampionBean");
-		if (selectChampionBean == null) {
-			selectChampionBean = new SelectChampionBean();
-			request.getSession().setAttribute("selectChampionBean", selectChampionBean);
-		}
-		ComeFromBean comeFromBean = (ComeFromBean) request.getSession().getAttribute("comeFromBean");
-		if (comeFromBean == null) {
-			comeFromBean = new ComeFromBean();
-			request.getSession().setAttribute("comeFromBean", comeFromBean);
-		}
-		// ---------------------------------------------
-		String comeFrom = new Denullify().doString(request.getParameter("comeFrom"));
-		String championString = new Denullify().doInt(request.getParameter("champion"));
-		String login = new Denullify().doString(request.getParameter("login"));
-		//-------------------Login Merker-------------
-		if (!comeFrom.equals("")) {
-			comeFromBean.setComeFrom(comeFrom);
-		}
-		comeFromBean.setCurrentSite("SelectChampionServlet");
-		//--------------------------------------------
-		
-		if (positionBean.getPosition().equals(PositionEnum.Null)) {
-			selectChampionBean.setPosition(positionBean.getPosition());
-			response.sendRedirect("/jsp/SelectChampion.jsp");
-		} else if (!championString.equals("9999999")) {
-			try {
-				
-				LTChampionBean champion = LTChampions.get(Integer.parseInt(championString));
-				positionBean.setChampion(champion);
-				response.sendRedirect("/GuideOverviewServlet?comeFrom=SelectChampionBean");
-				
-			} catch (NumberFormatException | ClassNotFoundException | SQLException e) {
-				e.printStackTrace();
-			}
-			
-		} else if(login.equals("Login")) {
-			response.sendRedirect("/LoginServlet?comeFrom=SelectChampionServlet");
-		} else if (!comeFrom.equals("")) {
-			if (!positionBean.getPosition().equals(PositionEnum.Null)) {
-				selectChampionBean.setPosition(positionBean.getPosition());
-			}
-			response.sendRedirect("/jsp/SelectChampion.jsp");
-		} else {
-			response.sendRedirect("/IndexServlet?comeFrom=SelectChampionServlet");
-		}
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // --------------------------BEANS----------------
+        PositionBean positionBean = (PositionBean) request.getSession().getAttribute("positionBean");
+        if (positionBean == null) {
+            positionBean = new PositionBean();
+            request.getSession().setAttribute("positionBean", positionBean);
+        }
+        SelectChampionBean selectChampionBean = (SelectChampionBean) request.getSession().getAttribute("selectChampionBean");
+        if (selectChampionBean == null) {
+            selectChampionBean = new SelectChampionBean();
+            request.getSession().setAttribute("selectChampionBean", selectChampionBean);
+        }
+        ComeFromBean comeFromBean = (ComeFromBean) request.getSession().getAttribute("comeFromBean");
+        if (comeFromBean == null) {
+            comeFromBean = new ComeFromBean();
+            request.getSession().setAttribute("comeFromBean", comeFromBean);
+        }
+        // ---------------------------------------------
+        String comeFrom = new Denullify().doString(request.getParameter("comeFrom"));
+        String championString = new Denullify().doInt(request.getParameter("champion"));
+        String login = new Denullify().doString(request.getParameter("login"));
+        //-------------------Login Merker-------------
+        if (!comeFrom.equals("")) {
+            comeFromBean.setComeFrom(comeFrom);
+        }
+        comeFromBean.setCurrentSite("SelectChampionServlet");
+        //--------------------------------------------
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+
+        if (positionBean.getPosition().equals(PositionEnum.Null)) {
+            selectChampionBean.setPosition(positionBean.getPosition());
+            //redirect to view
+            response.sendRedirect("/SelectChampion/" + positionBean.getPosition().getPositon());
+        } else if (!championString.equals("9999999")) {
+            try {
+                LTChampionBean champion = LTChampions.get(Integer.parseInt(championString));
+                positionBean.setChampion(champion);
+                //redirect to guide overview servlet
+                response.sendRedirect("/GuideOverviewServlet?comeFrom=SelectChampionBean");
+            } catch (NumberFormatException | ClassNotFoundException | SQLException e) {
+                e.printStackTrace();
+            }
+        } else if (login.equals("Login")) {
+            //redirect to login servlet
+            response.sendRedirect("/LoginServlet?comeFrom=SelectChampionServlet");
+        } else if (!comeFrom.equals("")) {
+            if (!positionBean.getPosition().equals(PositionEnum.Null)) {
+                selectChampionBean.setPosition(positionBean.getPosition());
+            }
+            //redirect to view
+            response.sendRedirect("/SelectChampion/" + positionBean.getPosition().getPositon());
+        } else {
+            //redirect to index servlet
+            response.sendRedirect("/IndexServlet?comeFrom=SelectChampionServlet");
+        }
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     * response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doGet(request, response);
+    }
 
 }

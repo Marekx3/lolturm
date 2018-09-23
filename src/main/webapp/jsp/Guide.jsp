@@ -1,7 +1,7 @@
 <%@page import="de.lolturm.guide.GuideBean"%>
 <%@page import="de.lolturm.userid.UseridBean"%>
 <%@page import="de.lolturm.html.PositionBean"%>
-<%@page import="de.lolturm.html.headerBean"%>
+<%@page import="de.lolturm.html.HeaderBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -10,14 +10,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
-<jsp:useBean id="headBean" class="de.lolturm.html.headBean" scope="session"/>
+<jsp:useBean id="headBean" class="de.lolturm.html.HeadBean" scope="session"/>
 <jsp:getProperty property="headHtml" name="headBean" />
 
 	<script src='/js/tooltip.js'></script>
 
 </head>
 <body>
-	<jsp:useBean id="headerBean" class="de.lolturm.html.headerBean" scope="session" />
+	<jsp:useBean id="headerBean" class="de.lolturm.html.HeaderBean" scope="session" />
 	<jsp:useBean id="positionBean" class="de.lolturm.html.PositionBean" scope="session" />
 	<jsp:useBean id="useridBean" class="de.lolturm.userid.UseridBean" scope="session" />
 	<jsp:useBean id="guideBean" class="de.lolturm.guide.GuideBean" scope="session" />

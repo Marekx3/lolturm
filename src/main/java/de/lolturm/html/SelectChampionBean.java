@@ -18,11 +18,11 @@ public class SelectChampionBean {
 	public String getSelectChampionHtml() throws ClassNotFoundException, SQLException {
 		String html = "";
 		
-		ArrayList<LTChampionBean> champions = LTChampions.allChampions(position + "");
+		ArrayList<LTChampionBean> champions = LTChampions.allChampions(position.getPositon());
 			
 		for (LTChampionBean champion : champions) {
 		
-		html += "<a href='/SelectChampionServlet?champion="+champion.getId()+"&position="+ this.position +"'>\n";
+		html += "<a href='/SelectChampionServlet?champion="+champion.getId()+"&position="+ this.position.getPositon() +"'>\n";
 		html += "<img alt='"+champion.getName()+"' class='champions' src='http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/"+champion.getKey()+".png'>\n";
 		html += "</a>\n";
 		
