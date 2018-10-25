@@ -20,13 +20,13 @@ public class PositionBean {
 		html += "	<ul>\n";
 
 		for (PositionEnum position : PositionEnum.values()) {
-
+			if (!position.equals(PositionEnum.Null)) {
 			html += "<li>\n";
 			html += "	<a href='/IndexServlet?position="+ position +"'>\n";
 			html += "		<img src='/images/icons/" + position + ".png' />\n";
 			html += "	</a>\n";
 			html += "</li>\n";
-
+			}
 		}
 
 		html += "		</ul>\n";

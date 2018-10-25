@@ -20,11 +20,11 @@ public class Userid {
 		preparedStatement.setInt(1, user);
 		ResultSet result = preparedStatement.executeQuery();
 
-		Integer id = null;
-		String password = null;
-		String username = null;
-		String email = null;
-		String summonername = null;
+		Integer id;
+		String password;
+		String username;
+		String email;
+		String summonername;
 
 		while (result.next()) {
 			id = result.getInt("id");
